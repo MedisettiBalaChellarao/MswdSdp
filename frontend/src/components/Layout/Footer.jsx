@@ -10,9 +10,9 @@ function Footer() {
     <footer className= {isAuthorized ? "footerShow" : "footerHide"}>
 <div>&copy; All Rights Reserved by Medisetti Bala Chellarao</div>
 <div>
-  <Link to={''} target='github'><FaGithub></FaGithub></Link>
+  <Link to={'https://github.com/MedisettiBalaChellarao'} target='github'><FaGithub></FaGithub></Link>
   <Link to={''} target='leetcode'><SiLeetcode></SiLeetcode></Link>
-  <Link to={''} target='linkedin'><FaLinkedin></FaLinkedin></Link>
+  <Link to={'www.linkedin.com/in/balu-medisetti-879a74316'} target='linkedin'><FaLinkedin></FaLinkedin></Link>
   <Link to={''} target='instagram'><RiInstagramFill></RiInstagramFill></Link>
 </div>
       
