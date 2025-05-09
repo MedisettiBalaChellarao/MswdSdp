@@ -1,29 +1,20 @@
-import express from "express";
-import mongoose from "mongoose";
-import dotenv from "dotenv";
-import cors from "cors"; // ✅ Import cors
+import mongoose from "mongoose"; //just mongoose import!
+import dotenv from "dotenv"
+dotenv.config()
 
-dotenv.config();
 
-const app = express();
-app.use(cors({ origin: "https://deploymentfrontend-e513.onrender.com" }));
- // ✅ Enable CORS
 
-// Optional: parse JSON requests
-app.use(express.json());
 
-// ✅ MongoDB Connection Function
-const dbConnection = () => {
-  mongoose
-    .connect(process.env.DB_URL, {
-      dbName: "Job_Portal",
+//Database connection here!
+ const dbConnection  = ()=>{
+    mongoose.connect(process.env.DB_URL,{
+       dbName: "Job_Portal"
+
+    }).then(()=>{ //agar connect ho jaye toh!
+       console.log("MongoDB Connected Sucessfully !")
+    }).catch((error)=>{
+        console.log(`Failed to connect ${error}`)
     })
-    .then(() => {
-      console.log("MongoDB Connected Successfully!");
-    })
-    .catch((error) => {
-      console.log(`Failed to connect: ${error}`);
-    });
-};
-
-export { app, dbConnection };
+    
+}
+export default dbConnection;
