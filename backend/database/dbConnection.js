@@ -2,6 +2,8 @@ import mongoose from "mongoose"; //just mongoose import!
 import dotenv from "dotenv"
 dotenv.config()
 
+app.use(cors());
+
 //Database connection here!
  const dbConnection  = ()=>{
     mongoose.connect(process.env.DB_URL,{
