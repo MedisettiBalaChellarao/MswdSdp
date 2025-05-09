@@ -6,7 +6,8 @@ import cors from "cors"; // ✅ Import cors
 dotenv.config();
 
 const app = express();
-app.use(cors()); // ✅ Enable CORS
+app.use(cors({ origin: "https://deploymentfrontend-e513.onrender.com" }));
+ // ✅ Enable CORS
 
 // Optional: parse JSON requests
 app.use(express.json());
