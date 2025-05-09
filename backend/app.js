@@ -14,8 +14,8 @@ config({ path: "./config/config.env" });
 
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL],
-    method: ["GET", "POST", "DELETE", "PUT"],
+    origin: 'https://deploymentfrontend-e513.onrender.com',
+    methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
 );
